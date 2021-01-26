@@ -1,5 +1,7 @@
 
 import { GetServerSideProps } from 'next';
+import Link from 'next/link';
+
 import { Title } from '@/styles/pages/Home';
 import SEO from '@/components/SEO';
 
@@ -51,6 +53,12 @@ export default function Home({ recommendedProducts }: HomeProps) {
           })}
         </ul>
       </section>
+
+      <p>
+        <Link href="/catalog/products/camisetas">
+          <a>Link com next</a>
+        </Link>
+      </p>
 
       <button onClick={handleSum}>Sum!</button>
     </div>
